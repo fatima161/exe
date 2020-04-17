@@ -18,11 +18,15 @@ pipeline {
         stage('Deploiement Ansible') {
             steps{
                 ansiblePlaybook (
+                    inventory: 10.189.100.192,
                     colorized: true,
-                    become: true,
                     playbook: 'playbook.yml'
                 )
-                
+                ansibleVault (
+                    vaultCredentialsId: 
+
+                )
+
             }
         }    
 	}
