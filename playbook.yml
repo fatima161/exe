@@ -1,0 +1,24 @@
+---
+- name: 
+  hosts: 10.189.100.192
+  remote_user: root 
+
+  tasks: 
+    - name: ' installation de git ' 
+      apt: 
+        name: git 
+        state: present
+    - name: ' installation nodejs '
+      apt: 
+        name: nodejs
+        state: present 
+    - name: 'installation npm'
+      apt: 
+        name: npm
+        state: present
+    - name: 'telechargement'
+      git:
+        repo: https://github.com/web-slate/simple-react-app-with-unit-testing 
+        dest: /home/ansible/tp
+      
+...
