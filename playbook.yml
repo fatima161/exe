@@ -20,5 +20,9 @@
       git:
         repo: https://github.com/web-slate/simple-react-app-with-unit-testing 
         dest: /home/ansible/tp
+    - name: 'plugin'
+        jenkins_plugin:
+        name: build-pipeline-plugin
+        
       
 ...
